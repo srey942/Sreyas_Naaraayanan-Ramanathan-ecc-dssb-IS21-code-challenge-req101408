@@ -82,7 +82,7 @@ There are two ways which the application could be run. The first way is on your 
 
 Please have the minimum version of node installed on your workstation.
 
-Start by cloning the [GitHub Repository] ().
+Start by cloning the [GitHub Repository] (https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git).
 
  Back-end :
 - cd into `/api` and create an .env file with the following contents
