@@ -32,7 +32,7 @@ export class ProductController {
         private readonly productService: ProductService
     ) {}
 
-    // get all products
+    // Get all products
     @Get()
     @ApiResponse({ status: HttpStatus.OK, isArray: true, type: ProductData })
     public async find(): Promise<ProductData[]> {
@@ -40,7 +40,7 @@ export class ProductController {
         return products.map((product) => product.buildData());
     }
 
-    //get product by id
+    // Get product by id
     @Get(":id")
     @ApiResponse({ status: HttpStatus.OK, type: ProductData })
     public async findById(@Param("id") id: number): Promise<ProductData> {
@@ -50,7 +50,7 @@ export class ProductController {
         }
         return product.buildData();
     }
-
+    // Delete product
     @Delete(":id")
     @ApiResponse({ status: HttpStatus.OK })
     public async delete(
@@ -64,7 +64,7 @@ export class ProductController {
             return { status: "Failed" };
         }
     }
-
+    // Create product 
     @Post()
     @ApiResponse({ status: HttpStatus.CREATED, type: ProductData })
     public async create(
@@ -74,7 +74,7 @@ export class ProductController {
         this.logger.info(`Product with ID ${product.productId} created`);
         return product.buildData();
     }
-
+    // Put api product
     @Put(":id")
     @ApiResponse({ status: HttpStatus.OK, type: ProductData })
     public async update(
@@ -97,7 +97,7 @@ export class ProductController {
             );
         }
     }
-
+    // Seed mock data
     @Post("seed")
     @ApiResponse({ status: HttpStatus.OK })
     public async seed(): Promise<{ status: "Done" | "Failed" }> {

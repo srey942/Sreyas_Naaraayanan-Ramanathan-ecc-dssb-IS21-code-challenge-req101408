@@ -82,7 +82,7 @@ There are two ways which the application could be run. The first way is on your 
 
 Please have the minimum version of node installed on your workstation.
 
-Start by cloning the [GitHub Repository] (https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git).
+Start by cloning the GitHub Repository - [https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git](https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git).
 
  Back-end :
 - cd into `/api` and create an .env file with the following contents
@@ -96,9 +96,10 @@ SWAGGER_ENABLE=1
 
 - After creating the .env file, please install the required node modules by `npm install`
 - Once the node modules are installed,run `npm run dev` command to start the backend (api component).
+- After the backend is up and running the swagger is available on [http://localhost:3000/api/api-docs/](http://localhost:3000/api/api-docs/)
 - Seed mock data by executing the endpoint (`/api/product/seed`) from the swagger documentation.
 - After seeding the data all products can be viewed at `http://localhost:3000/api/product`
-- The swagger documentation contains the GET, POST, PUT and DELETE endpoints for the product.
+- The swagger documentation contains the GET, POST, PUT and DELETE endpoints for the product for the product apis.
 
 **Note The backend requires to be seeded with random products first before running the front-end.**
 
@@ -110,9 +111,9 @@ Front-end :
 
 ### Docker method:
 
-Please ensure that you have mininum version of docker version 19.03.8 [https://nvd.nist.gov/vuln/detail/CVE-2019-14271] installed on your system.
+Please ensure that you have mininum version of docker version 19.03.8 [https://nvd.nist.gov/vuln/detail/CVE-2019-14271] is installed on your system.
 
-Start by cloning the [GitHub Repository] ().
+Start by cloning the GitHub Repository - [https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git](https://github.com/srey942/Sreyas_Naaraayanan-Ramanathan-ecc-dssb-IS21-code-challenge-req101408.git).
 
  Back-end :
 - cd into `/api` and create an .env file with the following contents
@@ -128,6 +129,7 @@ SWAGGER_ENABLE=1
     * `docker build -t server .`
 - Once the container is built, run the following command to start the backend of the application.
     * `docker run -p 3000:3000 server:latest`
+- After the backend is up and running the swagger is available on [http://localhost:3000/api/api-docs/](http://localhost:3000/api/api-docs/) 
 - Seed mock data by executing the endpoint (`/api/product/seed`) from the swagger documentation.
 - After seeding the data all products can be viewed at `http://localhost:3000/api/product`
 - The swagger documentation contains the GET, POST, PUT and DELETE endpoints for the product apis.
@@ -136,8 +138,8 @@ SWAGGER_ENABLE=1
 
 Front-end :
 - cd into `/web-app`
-- Run the follwing docker command to build the container
-    * docker build -t client .
+- Run the follwing docker command to build the container (to be run from `/web-app` directory)
+    * `docker build -t client .`
 - Once the container is built, run the following command to start the frontend of the application.
     * `docker run -p 4000:4000 client:latest`
 - Once the frontend is started, open [http://localhost:4000](http://localhost:4000) on your browser to use the application.
